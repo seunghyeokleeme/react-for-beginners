@@ -7,7 +7,6 @@ function Detail() {
     const json = await (
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
-    console.log(json.data.movie);
   };
   useEffect(() => {
     getMovies();
