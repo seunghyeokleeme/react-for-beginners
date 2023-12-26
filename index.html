@@ -5,11 +5,24 @@
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
   <script>
     const root = document.getElementById("root");
-    const span = React.createElement(
-      "span",
-      { id: "sexy-span", style: { color: "red" } },
-      "Hello I'm span."
+    const h3 = React.createElement(
+      "h3",
+      {
+        onMouseEnter: () => console.log("mouse enter"),
+      },
+      "Total clicks: 0"
     );
-    ReactDOM.render(span, root);
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("im clicked"),
+        style: {
+          backgroundColor: "tomato",
+        },
+      },
+      "Click me"
+    );
+    const container = React.createElement("div", null, [h3, btn]);
+    ReactDOM.render(container, root);
   </script>
 </html>
